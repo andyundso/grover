@@ -23,11 +23,6 @@ jobs:
           '3.2',
           '3.3',
         ]
-        node-version: [
-          '18',
-          '20',
-          '22',
-        ]
         puppeteer-version: [
           '18',
           '19',
@@ -49,7 +44,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20
 
       - name: Install Puppeteer
         run: npm install puppeteer@${{ matrix.puppeteer-version }}
